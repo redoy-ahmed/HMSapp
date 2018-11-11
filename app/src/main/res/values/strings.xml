@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HMSapp</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="dialog_network_unavailable_title">No internet connection</string>
+    <string name="dialog_default_negative_button_label">Cancel</string>
+    <string name="dialog_default_positive_button_label">OK</string>
+
+    <string name="dialog_network_unavailable_message_check_and_try_again">Please check your internet connection and try again</string>
+    <string name="dialog_network_unavailable_message_retry">Try again?</string>
+</resources>
