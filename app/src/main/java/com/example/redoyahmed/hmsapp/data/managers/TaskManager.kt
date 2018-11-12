@@ -1,11 +1,7 @@
-package com.shohokari.data.managers
+package com.example.redoyahmed.hmsapp.data.managers
 
-import com.shohokari.data.network.*
+import com.example.redoyahmed.hmsapp.data.network.*
 import javax.inject.Singleton
-
-/**
- * Created by AITL-01 on 4/18/2018.
- */
 
 @Singleton
 internal object TaskManager {

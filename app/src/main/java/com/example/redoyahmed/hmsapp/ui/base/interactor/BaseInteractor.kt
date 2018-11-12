@@ -1,8 +1,8 @@
 package com.example.redoyahmed.hmsapp.ui.base.interactor
 
-import com.shohokari.data.network.ApiHelper
-import com.shohokari.data.preferences.PreferenceHelper
-import com.shohokari.util.AppConstants
+import com.example.redoyahmed.hmsapp.data.network.ApiHelper
+import com.example.redoyahmed.hmsapp.data.preferences.PreferenceHelper
+import com.example.redoyahmed.hmsapp.util.AppConstants
 
 open class BaseInteractor() : MVPInteractor {
 

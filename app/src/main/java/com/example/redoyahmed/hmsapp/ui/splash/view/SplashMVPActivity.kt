@@ -6,8 +6,6 @@ import com.example.redoyahmed.hmsapp.R
 import com.example.redoyahmed.hmsapp.ui.base.view.BaseActivity
 import com.example.redoyahmed.hmsapp.ui.splash.interactor.SplashMVPInteractor
 import com.example.redoyahmed.hmsapp.ui.splash.presenter.SplashMVPPresenter
-import com.shohokari.data.preferences.AppPreferenceHelper
-import com.shohokari.util.AppConstants
 import javax.inject.Inject
 
 class SplashMVPActivity : BaseActivity(), SplashMVPView {

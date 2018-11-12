@@ -1,26 +1,13 @@
-package com.shohokari.data.network
+package com.example.redoyahmed.hmsapp.data.network
 
-import com.shohokari.BuildConfig
 
-/**
- * Created by jyotidubey on 11/01/18.
- */
 object ApiEndPoint {
-
-    val ENDPOINT_GOOGLE_LOGIN = BuildConfig.BASE_URL + "/588d14f4100000a9072d2943"
-    val ENDPOINT_FACEBOOK_LOGIN = BuildConfig.BASE_URL + "/588d15d3100000ae072d2944"
-    val ENDPOINT_SERVER_LOGIN = BuildConfig.BASE_URL + "/588d15f5100000a8072d2945"
-    val ENDPOINT_LOGOUT = BuildConfig.BASE_URL + "/588d161c100000a9072d2946"
-    val ENDPOINT_BLOG = BuildConfig.BASE_URL + "/5926ce9d11000096006ccb30"
-    val ENDPOINT_OPEN_SOURCE = BuildConfig.BASE_URL + "/5926c34212000035026871cd"
 
     val ENDPOINT_SERVER_SHOHOKARI_BASE_URL = "https://shohokari.com/"
     val ENDPOINT_SERVER_SHOHOKARI_BASE_API_URL = "https://shohokari.com/"
     val ENDPOINT_SERVER_SHOHOKARI_PUBLIC_URL = "https://shohokari.com/public-profile/"
     val ENDPOINT_SERVER_SHOHOKARI_TASK_URL = "https://shohokari.com/tasks/"
 
-
-    //
     //Start Area Authentication
 
     val ENDPOINT_SERVER_SHOHOKARI_LOGIN = "https://shohokari.com/api/authentication/login"
@@ -28,12 +15,6 @@ object ApiEndPoint {
     const val ENDPOINT_SERVER_SHOHOKARI_SIGN_UP = "https://shohokari.com/api/authentication/register"
     const val ENDPOINT_SERVER_SHOHOKARI_MOBILELOGINREGISTRATION = "https://shohokari.com/api/authentication/loginregistrationfacebookmobile"
     const val ENDPOINT_SERVER_SHOHOKARI_FACEBOOK_LINKEDIN_REGISTRATION_LOGIN = "https://shohokari.com/api/authentication/loginsocial"
-
-
-    ///End Area Authentication
-//    val ENDPOINT_SERVER_SHOHOKARI_LOGIN = "http://localhost:59082/api/authentication/login"
-
-    //Start task Keyword Area
 
 
     val ENDPOINT_SERVER_SHOHOKARI_MYTASKLIST = "https://shohokari.com/api/task/taskinformationbysearch/get"

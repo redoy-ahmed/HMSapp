@@ -1,13 +1,11 @@
-package com.shohokari.data.network
+package com.example.redoyahmed.hmsapp.data.network
 
+import com.example.redoyahmed.hmsapp.di.ApiKeyInfo
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.shohokari.di.ApiKeyInfo
 import javax.inject.Inject
 
-/**
- * Created by jyotidubey on 11/01/18.
- */
+
 class ApiHeader @Inject constructor(internal val publicApiHeader: PublicApiHeader, internal val protectedApiHeader: ProtectedApiHeader, internal var privateApiHeader: PrivateApiHeader) {
 
     class PublicApiHeader @Inject constructor(@ApiKeyInfo

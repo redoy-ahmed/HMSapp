@@ -1,17 +1,9 @@
-package com.shohokari.data.network
+package com.example.redoyahmed.hmsapp.data.network
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class UserRatingSummaryData(
-
-//        @Expose
-//        @SerializedName("TaskerAverageRating")
-//        var AvgRating: Int? = null,
-//
-//        @Expose
-//        @SerializedName("TaskerRatingCount")
-//        var RatingCount: Int? = null,
 
         @Expose
         @SerializedName("CompletedTaskerTaskCount")

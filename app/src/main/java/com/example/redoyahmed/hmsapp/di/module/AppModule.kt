@@ -2,15 +2,16 @@ package com.example.redoyahmed.hmsapp.di.module
 
 import android.app.Application
 import android.content.Context
+import com.example.redoyahmed.hmsapp.BuildConfig
+import com.example.redoyahmed.hmsapp.data.network.ApiHeader
+import com.example.redoyahmed.hmsapp.data.network.ApiHelper
+import com.example.redoyahmed.hmsapp.data.network.AppApiHelper
+import com.example.redoyahmed.hmsapp.data.preferences.AppPreferenceHelper
+import com.example.redoyahmed.hmsapp.data.preferences.PreferenceHelper
+import com.example.redoyahmed.hmsapp.di.ApiKeyInfo
+import com.example.redoyahmed.hmsapp.di.PreferenceInfo
+import com.example.redoyahmed.hmsapp.util.AppConstants
 import com.example.redoyahmed.hmsapp.util.SchedulerProvider
-import com.shohokari.data.network.ApiHeader
-import com.shohokari.data.network.ApiHelper
-import com.shohokari.data.network.AppApiHelper
-import com.shohokari.data.preferences.AppPreferenceHelper
-import com.shohokari.data.preferences.PreferenceHelper
-import com.shohokari.di.ApiKeyInfo
-import com.shohokari.di.PreferenceInfo
-import com.shohokari.util.AppConstants
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable
@@ -24,6 +25,10 @@ class AppModule {
     internal fun provideContext(application: Application): Context = application
 
     @Provides
+    @ApiKeyInfo
+    internal fun provideApiKey(): String = BuildConfig.API_KEY
+
+    @Provides
     @PreferenceInfo
     internal fun provideprefFileName(): String = AppConstants.PREF_NAME
 
@@ -35,13 +40,15 @@ class AppModule {
     @Singleton
     internal fun provideProtectedApiHeader(@ApiKeyInfo apiKey: String, preferenceHelper: PreferenceHelper)
             : ApiHeader.ProtectedApiHeader = ApiHeader.ProtectedApiHeader(apiKey = apiKey,
-            userId = preferenceHelper.getCurrentUserId(),
-            accessToken = preferenceHelper.getAccessToken())
+        userId = preferenceHelper.getCurrentUserId(),
+        accessToken = preferenceHelper.getAccessToken())
+
 
     @Provides
     @Singleton
     internal fun providePrivateApiHeader(@ApiKeyInfo apiKey: String, preferenceHelper: PreferenceHelper)
             : ApiHeader.PrivateApiHeader = ApiHeader.PrivateApiHeader(cookieKey = preferenceHelper.getAccessCookie())
+
 
     @Provides
     @Singleton
@@ -52,4 +59,6 @@ class AppModule {
 
     @Provides
     internal fun provideSchedulerProvider(): SchedulerProvider = SchedulerProvider()
+
+
 }

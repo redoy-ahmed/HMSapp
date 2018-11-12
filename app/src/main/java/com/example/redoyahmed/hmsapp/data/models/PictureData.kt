@@ -1,4 +1,4 @@
-package com.shohokari.data.models
+package com.example.redoyahmed.hmsapp.data.models
 
 import java.io.File
 

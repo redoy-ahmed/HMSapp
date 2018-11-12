@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.redoyahmed.hmsapp.R
 import com.example.redoyahmed.hmsapp.util.CommonUtil
-import com.shohokari.util.NetworkChangeReceiver
+import com.example.redoyahmed.hmsapp.util.NetworkChangeReceiver
 import dagger.android.AndroidInjection
 
 /**

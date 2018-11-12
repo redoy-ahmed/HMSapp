@@ -1,25 +1,15 @@
-package com.shohokari.data.network
+package com.example.redoyahmed.hmsapp.data.network
 
 import com.androidnetworking.interfaces.OkHttpResponseListener
 import io.reactivex.Observable
 import java.io.File
 
-/**
- * Created by jyotidubey on 04/01/18.
- */
 interface ApiHelper {
 
     fun setAccessToken(token: String)
 
     //Start Area Authentication
     fun performServerLogin(request: LoginRequest.ServerLoginRequest): Observable<LoginResponse>
-
-    fun performServerLoginCookie(request: LoginRequest.ServerLoginRequest, okHttpResponseListener: OkHttpResponseListener)
-
-    fun performFBLogin(request: LoginRequest.FacebookLoginRequest): Observable<LoginResponse>
-
-    fun performGoogleLogin(request: LoginRequest.GoogleLoginRequest): Observable<LoginResponse>
-
 
     fun performServerSignUp(request: SignUpRequest.ServerSignUpRequest): Observable<SignUpResponse>
     fun performChangePasswordApiCall(request: ChangePasswordRequest.PasswordChangeRequest): Observable<ChangePasswordResponse>

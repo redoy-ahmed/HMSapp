@@ -1,11 +1,7 @@
-package com.shohokari.data.preferences
+package com.example.redoyahmed.hmsapp.data.preferences
 
-import androidx.core.content.edit
-import com.shohokari.util.AppConstants
+import com.example.redoyahmed.hmsapp.util.AppConstants
 
-/**
- * Created by jyotidubey on 04/01/18.
- */
 interface PreferenceHelper {
 
     fun getCurrentUserLoggedInMode(): Int

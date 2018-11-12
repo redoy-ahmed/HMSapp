@@ -1,4 +1,4 @@
-package com.shohokari.data.firebase
+package com.example.redoyahmed.hmsapp.data.firebase
 
 import android.annotation.SuppressLint
 import android.app.*
@@ -11,22 +11,17 @@ import android.os.Build
 import android.support.v4.app.NotificationCompat
 import android.support.v4.app.NotificationManagerCompat
 import android.support.v4.content.ContextCompat
+import com.example.redoyahmed.hmsapp.R
+import com.example.redoyahmed.hmsapp.data.network.Notifications
+import com.example.redoyahmed.hmsapp.data.preferences.AppPreferenceHelper
+import com.example.redoyahmed.hmsapp.util.AppConstants
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.google.gson.Gson
-import com.shohokari.R
-import com.shohokari.data.network.Notifications
-import com.shohokari.data.preferences.AppPreferenceHelper
-import com.shohokari.ui.chat.view.ChatActivity
-import com.shohokari.ui.notification.view.NotificationSettingsActivity
-import com.shohokari.ui.offer.view.OfferConversationActivity
-import com.shohokari.ui.publicchat.view.PublicChatActivity
-import com.shohokari.ui.taskdetails.view.TaskDetailsActivity
-import com.shohokari.ui.tasknotification.view.TaskNotificationActivity
-import com.shohokari.util.AppConstants
 import org.json.JSONException
 
 
+/*
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     internal var intent: Intent? = null
@@ -403,4 +398,4 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
         return isActivityFound
     }
-}
+}*/

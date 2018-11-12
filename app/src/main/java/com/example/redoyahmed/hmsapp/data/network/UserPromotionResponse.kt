@@ -1,4 +1,4 @@
-package com.shohokari.data.network
+package com.example.redoyahmed.hmsapp.data.network
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

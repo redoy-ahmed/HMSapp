@@ -1,16 +1,13 @@
-package com.shohokari.data.preferences
+package com.example.redoyahmed.hmsapp.data.preferences
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
-import com.shohokari.data.network.ApiHeader
-import com.shohokari.di.PreferenceInfo
-import com.shohokari.util.AppConstants
+import com.example.redoyahmed.hmsapp.data.network.ApiHeader
+import com.example.redoyahmed.hmsapp.di.PreferenceInfo
+import com.example.redoyahmed.hmsapp.util.AppConstants
 import javax.inject.Inject
 
-/**
- * Created by jyotidubey on 04/01/18.
- */
 class AppPreferenceHelper @Inject constructor(context: Context,
                                               @PreferenceInfo private val prefFileName: String) : PreferenceHelper {
     companion object {
@@ -91,7 +88,7 @@ class AppPreferenceHelper @Inject constructor(context: Context,
 
     override fun setCurrentUserName(userName: String?) = mPrefs.edit { putString(PREF_KEY_CURRENT_USER_NAME, userName) }
 
-    override fun getCurrentUserEmail(): String = mPrefs.getString(PREF_KEY_CURRENT_USER_EMAIL, "")
+    override fun getCurrentUserEmail(): String? = mPrefs.getString(PREF_KEY_CURRENT_USER_EMAIL, "")
 
     override fun setCurrentUserEmail(email: String?) = mPrefs.edit { putString(PREF_KEY_CURRENT_USER_EMAIL, email) }
 
@@ -99,7 +96,7 @@ class AppPreferenceHelper @Inject constructor(context: Context,
 
     override fun getCurrentUserIsEmailVerified(): Boolean = mPrefs.getBoolean(PREF_KEY_CURRENT_USER_EMAIL_VERIFIED, false)
 
-    override fun getAccessToken(): String = mPrefs.getString(PREF_KEY_ACCESS_TOKEN, "")
+    override fun getAccessToken(): String? = mPrefs.getString(PREF_KEY_ACCESS_TOKEN, "")
 
     override fun setAccessToken(accessToken: String?) = mPrefs.edit { putString(PREF_KEY_ACCESS_TOKEN, accessToken) }
 
@@ -196,11 +193,7 @@ class AppPreferenceHelper @Inject constructor(context: Context,
 
     override fun setCurrentUserRegion(region: String?) = mPrefs.edit { putString(PREF_KEY_CURRENT_USER_REGION, region) }
 
-    override fun getCurrentUserRegion(): String = mPrefs.getString(PREF_KEY_CURRENT_USER_REGION, "")
-
-//    override fun setCurrentUserHome(home: String?) = mPrefs.edit { putString(PREF_KEY_CURRENT_USER_HOME, home) }
-//
-//    override fun getCurrentUserHome(): String = mPrefs.getString(PREF_KEY_CURRENT_USER_HOME, "")
+    override fun getCurrentUserRegion(): String? = mPrefs.getString(PREF_KEY_CURRENT_USER_REGION, "")
 
     override fun setCurrentUserIsPostTask(postTask: Boolean) = mPrefs.edit { putBoolean(PREF_KEY_CURRENT_USER_IS_POST_TASK, postTask) }
 

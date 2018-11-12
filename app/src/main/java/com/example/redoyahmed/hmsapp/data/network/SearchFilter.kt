@@ -1,4 +1,4 @@
-package com.shohokari.data.network
+package com.example.redoyahmed.hmsapp.data.network
 
 data class SearchFilter(
 

@@ -1,4 +1,4 @@
-package com.shohokari.util
+package com.example.redoyahmed.hmsapp.util
 
 import android.content.BroadcastReceiver
 import android.content.Context

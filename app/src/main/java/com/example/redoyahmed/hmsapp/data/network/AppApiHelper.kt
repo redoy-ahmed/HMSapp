@@ -1,4 +1,4 @@
-package com.shohokari.data.network
+package com.example.redoyahmed.hmsapp.data.network
 
 import com.androidnetworking.common.Priority
 import com.androidnetworking.interfaces.OkHttpResponseListener
@@ -8,9 +8,6 @@ import io.reactivex.Observable
 import java.io.File
 import javax.inject.Inject
 
-/**
- * Created by jyotidubey on 04/01/18.
- */
 class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHelper {
 
     override fun setAccessToken(token: String) {
@@ -22,20 +19,6 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
 
     override fun performServerLogin(request: LoginRequest.ServerLoginRequest): Observable<LoginResponse> =
             Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_LOGIN)
-                    .addHeaders(apiHeader.publicApiHeader)
-                    .addBodyParameter(request)
-                    .build()
-                    .getObjectObservable(LoginResponse::class.java)
-
-    override fun performFBLogin(request: LoginRequest.FacebookLoginRequest): Observable<LoginResponse> =
-            Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_FACEBOOK_LOGIN)
-                    .addHeaders(apiHeader.publicApiHeader)
-                    .addBodyParameter(request)
-                    .build()
-                    .getObjectObservable(LoginResponse::class.java)
-
-    override fun performGoogleLogin(request: LoginRequest.GoogleLoginRequest): Observable<LoginResponse> =
-            Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_GOOGLE_LOGIN)
                     .addHeaders(apiHeader.publicApiHeader)
                     .addBodyParameter(request)
                     .build()
@@ -67,17 +50,6 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
                 .build()
                 .getObjectObservable(LoginResponse::class.java)
     }
-
-    override fun performServerLoginCookie(request: LoginRequest.ServerLoginRequest, okHttpResponseListener: OkHttpResponseListener) {
-
-        Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_FACEBOOK_LOGIN)
-                .addHeaders(apiHeader.publicApiHeader)
-                .addBodyParameter(request)
-                .build()
-                .getAsOkHttpResponse(okHttpResponseListener)
-    }
-
-
     override fun performServerFacebookMobileSignUp(request: SignUpRequest.ServerFacebookMobileSignUpRequest): Observable<LoginResponse> {
 
         return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_MOBILELOGINREGISTRATION)

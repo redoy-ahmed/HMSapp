@@ -7,14 +7,8 @@ import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.support.v4.app.FragmentManager
 import com.example.redoyahmed.hmsapp.util.CommonUtil
-import com.shohokari.util.CommonUtil
-import com.shohokari.widget.ProgressDialog
 import dagger.android.support.AndroidSupportInjection
 
-
-/**
- * Created by jyotidubey on 14/01/18.
- */
 abstract class BaseDialogView : DialogFragment(), DialogMVPView {
 
     private var parentActivity: BaseActivity? = null

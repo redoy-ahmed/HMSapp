@@ -1,10 +1,11 @@
-package com.shohokari.ui.splash
+package com.example.redoyahmed.hmsapp.ui.splash
 
-import com.shohokari.ui.splash.interactor.SplashInteractor
-import com.shohokari.ui.splash.interactor.SplashMVPInteractor
-import com.shohokari.ui.splash.presenter.SplashMVPPresenter
-import com.shohokari.ui.splash.presenter.SplashPresenter
-import com.shohokari.ui.splash.view.SplashMVPView
+
+import com.example.redoyahmed.hmsapp.ui.splash.interactor.SplashInteractor
+import com.example.redoyahmed.hmsapp.ui.splash.interactor.SplashMVPInteractor
+import com.example.redoyahmed.hmsapp.ui.splash.presenter.SplashMVPPresenter
+import com.example.redoyahmed.hmsapp.ui.splash.presenter.SplashPresenter
+import com.example.redoyahmed.hmsapp.ui.splash.view.SplashMVPView
 import dagger.Module
 import dagger.Provides
 
