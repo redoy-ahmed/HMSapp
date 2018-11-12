@@ -7,4 +7,12 @@
 
     <string name="dialog_network_unavailable_message_check_and_try_again">Please check your internet connection and try again</string>
     <string name="dialog_network_unavailable_message_retry">Try again?</string>
+
+    <string name="google_api_key_1">AIzaSyCVnZfSs-k2wudCOxwpouRMAhfYVQi2o-k</string>
+    <string name="default_notification_channel_id">com.shohokari.android.app</string>
+    <string name="fb_login_protocol_scheme">fb390539151417201</string>
+
+    <string name="FACEBOOK_APP_ID">390539151417201</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">c628ffad381df51bfcd8d82adeb41244</string>
+    <string name="ak_login_protocol_scheme">390539151417201</string>
 </resources>
