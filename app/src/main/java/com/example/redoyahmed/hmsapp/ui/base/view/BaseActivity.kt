@@ -11,9 +11,6 @@ import com.example.redoyahmed.hmsapp.util.CommonUtil
 import com.example.redoyahmed.hmsapp.util.NetworkChangeReceiver
 import dagger.android.AndroidInjection
 
-/**
- * Created by jyotidubey on 04/01/18.
- */
 abstract class BaseActivity : AppCompatActivity(), MVPView, BaseFragment.CallBack, NetworkChangeReceiver.ConnectivityReceiverListener {
 
     private var progressDialog: ProgressDialog? = null

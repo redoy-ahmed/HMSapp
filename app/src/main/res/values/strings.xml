@@ -15,4 +15,14 @@
     <string name="FACEBOOK_APP_ID">390539151417201</string>
     <string name="ACCOUNT_KIT_CLIENT_TOKEN">c628ffad381df51bfcd8d82adeb41244</string>
     <string name="ak_login_protocol_scheme">390539151417201</string>
+
+
+    <string name="empty_email_error_message">Email cannot be blank</string>
+    <string name="invalid_email_error_message">Please Enter a valid email address</string>
+    <string name="empty_password_error_message">Password cannot be empty</string>
+    <string name="empty_mobile_error_message">Mobile Number cannot be empty</string>
+    <string name="login_failure">Login failed</string>
+
+    <string name="sign_up">Sign Up</string>
+
 </resources>

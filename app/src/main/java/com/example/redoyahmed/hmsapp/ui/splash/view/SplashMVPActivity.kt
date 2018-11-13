@@ -1,9 +1,11 @@
 package com.example.redoyahmed.hmsapp.ui.splash.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import com.example.redoyahmed.hmsapp.R
 import com.example.redoyahmed.hmsapp.ui.base.view.BaseActivity
+import com.example.redoyahmed.hmsapp.ui.signin.view.SignInActivity
 import com.example.redoyahmed.hmsapp.ui.splash.interactor.SplashMVPInteractor
 import com.example.redoyahmed.hmsapp.ui.splash.presenter.SplashMVPPresenter
 import javax.inject.Inject
@@ -15,22 +17,14 @@ class SplashMVPActivity : BaseActivity(), SplashMVPView {
 
     private val SPLASH_TIME_OUT = 3000
 
-    //lateinit var appPreferenceHelper: AppPreferenceHelper
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        /*appPreferenceHelper = AppPreferenceHelper(this, AppConstants.PREF_NAME)
-        LocaleHelper.setLocale(this, appPreferenceHelper.getApplicationLanguage())*/
-
         setContentView(R.layout.activity_splash)
-
 
         Handler().postDelayed({
             presenter.onAttach(this)
         }, SPLASH_TIME_OUT.toLong())
     }
-
 
     override fun onDestroy() {
         presenter.onDetach()
@@ -65,30 +59,12 @@ class SplashMVPActivity : BaseActivity(), SplashMVPView {
         }*/
     }
 
-    override fun openLoginSignUpActivity() {
-        /*val intent = Intent(this, IntroductionActivity::class.java)
+    override fun openSignInActivity() {
+        val intent = Intent(this, SignInActivity::class.java)
         startActivity(intent)
-        finish()*/
+        finish()
     }
 
     override fun setUpNavigation() {
     }
-
-
-    //Start Audio Area
-
-//    override fun onResume() {
-//        super.onResume()
-//        mMediaPlayer = MediaPlayer.create(applicationContext, R.raw.welcome_shohokari)
-//        if(appPreferenceHelper != null && appPreferenceHelper.getSettingAudioPlay()) {
-//            mMediaPlayer.start()
-//        }
-//    }
-//
-//    override fun onPause() {
-//        super.onPause()
-//        mMediaPlayer.release()
-//    }
-
-    //End Audio Area
 }

@@ -23,7 +23,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
-            tools:replace="android:icon">
+            tools:replace="android:icon" tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ui.splash.view.SplashMVPActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,6 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.signin.view.SignInActivity"/>
+        <activity android:name=".ui.signup.view.SignUpActivity"/>
 
 
         <meta-data

@@ -1,5 +1,9 @@
 package com.example.redoyahmed.hmsapp.di.builder
 
+import com.example.redoyahmed.hmsapp.ui.signin.SignInActivityModule
+import com.example.redoyahmed.hmsapp.ui.signin.view.SignInActivity
+import com.example.redoyahmed.hmsapp.ui.signup.SignUpActivityModule
+import com.example.redoyahmed.hmsapp.ui.signup.view.SignUpActivity
 import com.example.redoyahmed.hmsapp.ui.splash.SplashActivityModule
 import com.example.redoyahmed.hmsapp.ui.splash.view.SplashMVPActivity
 
@@ -13,11 +17,14 @@ abstract class ActivityBuilder {
     @ContributesAndroidInjector(modules = [(SplashActivityModule::class)])
     abstract fun bindSplashActivity(): SplashMVPActivity
 
+    @ContributesAndroidInjector(modules = [(SignInActivityModule::class)])
+    abstract fun bindSignInActivity(): SignInActivity
+
+    @ContributesAndroidInjector(modules = [(SignUpActivityModule::class)])
+    abstract fun bindSignUpActivity(): SignUpActivity
+
     /*@ContributesAndroidInjector(modules = [(MainActivityModule::class), (RateUsDialogFragmentProvider::class), (TaskFragmentProvider::class), (BrowseTaskFragmentProvider::class), (MyTaskFragmentProvider::class), (MessageFragmentProvider::class), (MoreFragmentProvider::class), (MyTaskListFragmentProvider::class)])
     abstract fun bindMainActivity(): MainActivity
-
-    @ContributesAndroidInjector(modules = [(LoginActivityModule::class)])
-    abstract fun bindLoginActivity(): LoginActivity
 
     @ContributesAndroidInjector(modules = [(TaskPostActivityModule::class), (TaskPostBudgetFragmentProvider::class), (TaskPostDetailsFragmentProvider::class), (TaskPostDueDateFragmentProvider::class)])
     abstract fun bindTaskPostActivity(): TaskPostActivity
