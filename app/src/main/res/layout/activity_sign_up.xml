@@ -2,19 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/register_main"
+                android:background="@color/colorPrimary"
                 android:descendantFocusability="beforeDescendants"
-                android:focusableInTouchMode="true" >
+                android:focusableInTouchMode="true">
 
     <include
             android:id="@+id/appbarnavigationLayout"
-            layout="@layout/app_bar_navigation" />
-
-    <View
-            android:id="@+id/view"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true" />
+            layout="@layout/app_bar_navigation"/>
 
     <ScrollView
             android:id="@+id/ScrollView"
@@ -22,16 +16,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/view"
+            android:layout_below="@+id/appbarnavigationLayout"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/registration_background"
-            android:padding="25dp" >
+            android:padding="25dp">
 
         <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
             <TextView
                     android:id="@+id/Register_tv"
@@ -39,87 +33,105 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
-                    android:text="Sign Up"
-                    android:textSize="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/sign_up"
+                    android:textSize="@dimen/huge"
                     android:textStyle="bold"
-                    android:typeface="monospace" />
+                    android:textColor="@color/colorPrimary"
+                    android:typeface="monospace"/>
 
             <EditText
-                    android:id="@+id/username_edtext"
+                    android:id="@+id/sign_up_edit_text_widget_mobile_number"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/height_for_spinner"
+                    android:background="@drawable/rounded_edittext_background"
                     android:layout_below="@+id/Register_tv"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
-                    android:background="@drawable/register_uname"
                     android:gravity="center"
-                    android:hint="Username"
+                    android:hint="@string/mobile_number_hint"
+                    android:inputType="phone"
+                    android:textStyle="bold"/>
+
+            <EditText
+                    android:id="@+id/sign_up_edit_text_widget_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/height_for_spinner"
+                    android:background="@drawable/rounded_edittext_background"
+                    android:layout_below="@+id/sign_up_edit_text_widget_mobile_number"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:hint="@string/user_name"
                     android:inputType="text"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
-            <EditText
-                    android:id="@+id/passwd_edtext"
+            <Spinner
+                    android:id="@+id/sign_up_spinner_gender"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/username_edtext"
+                    android:layout_height="@dimen/height_for_spinner"
+                    android:background="@drawable/rounded_edittext_background"
+                    android:layout_below="@+id/sign_up_edit_text_widget_name"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
-                    android:background="@drawable/register_password"
                     android:gravity="center"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:hint="@string/user_gender"
+                    android:inputType="text"
+                    android:textStyle="bold"/>
 
             <EditText
-                    android:id="@+id/cnfpasswd_edtext"
+                    android:id="@+id/sign_up_edit_text_widget_location"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/passwd_edtext"
+                    android:layout_height="@dimen/height_for_spinner"
+                    android:background="@drawable/rounded_edittext_background"
+                    android:layout_below="@+id/sign_up_spinner_gender"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
-                    android:background="@drawable/register_cnfpassword"
                     android:gravity="center"
-                    android:hint="Confirm Password"
+                    android:hint="@string/user_location"
+                    android:inputType="text"
+                    android:textStyle="bold"/>
+
+            <EditText
+                    android:id="@+id/sign_up_edit_text_widget_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/height_for_spinner"
+                    android:background="@drawable/rounded_edittext_background"
+                    android:layout_below="@+id/sign_up_edit_text_widget_location"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:hint="@string/password_hint"
                     android:inputType="textPassword"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
+
+            <EditText
+                    android:id="@+id/sign_up_edit_text_widget_confirm_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/height_for_spinner"
+                    android:background="@drawable/rounded_edittext_background"
+                    android:layout_below="@+id/sign_up_edit_text_widget_password"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:hint="@string/user_confirm_password"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"/>
 
             <Button
                     android:id="@+id/sign_up_button"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/cnfpasswd_edtext"
+                    android:layout_below="@+id/sign_up_edit_text_widget_confirm_password"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
-                    android:background="@drawable/register_button"
-                    android:text="Sign Up"
-                    android:textColor="#ffffff"
-                    android:textSize="20dp" />
-
-            <TextView
-                    android:id="@+id/member_login_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/sign_up_button"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
-                    android:text="Memeber Login?"
-                    android:textSize="15dp"
+                    android:background="@drawable/button_circular_pink"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:typeface="monospace" />
+                    android:textSize="@dimen/text_size_medium"/>
+
         </RelativeLayout>
     </ScrollView>
-
-    <ImageView
-            android:id="@+id/view_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/register_imview" />
 
 </RelativeLayout>

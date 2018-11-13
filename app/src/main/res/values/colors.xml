@@ -82,8 +82,8 @@
   <!-- Shohokari Color -->
 
 
-  <color name="colorPrimary">@color/hotdipPink</color>
-  <color name="colorPrimaryDark">@color/shohokari_status_bar</color>
+  <color name="colorPrimary">@color/red_dark</color>
+  <color name="colorPrimaryDark">@color/red_dark2</color>
 
   <color name="hotdipPink">#1caade</color>
   <color name="shohokari_status_bar">#1caade</color>

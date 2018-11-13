@@ -5,7 +5,9 @@
     <string name="dialog_default_negative_button_label">Cancel</string>
     <string name="dialog_default_positive_button_label">OK</string>
 
-    <string name="dialog_network_unavailable_message_check_and_try_again">Please check your internet connection and try again</string>
+    <string name="dialog_network_unavailable_message_check_and_try_again">Please check your internet connection and try
+        again
+    </string>
     <string name="dialog_network_unavailable_message_retry">Try again?</string>
 
     <string name="google_api_key_1">AIzaSyCVnZfSs-k2wudCOxwpouRMAhfYVQi2o-k</string>
@@ -23,6 +25,44 @@
     <string name="empty_mobile_error_message">Mobile Number cannot be empty</string>
     <string name="login_failure">Login failed</string>
 
+    <!--Sign In messages-->
+    <string name="sign_in_screen_title">Sign In</string>
+    <string name="mobile_number_hint">Mobile Number</string>
+    <string name="password_hint">Password</string>
+    <string name="sig_in_button_text">Sign In</string>
+
+    <!--Sign up messages-->
     <string name="sign_up">Sign Up</string>
+    <string name="user_name">Name</string>
+    <string name="user_location">Location</string>
+    <string name="user_gender">Gender</string>
+    <string name="user_password">Password</string>
+    <string name="user_confirm_password">Confirm Password</string>
+
+    <!--Forgot password messages-->
+    <string name="forgot_password_screen_title">Forgot Password</string>
+
+    <!--Navigation Drawer Items-->
+    <string name="about">About</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="feed">Feed</string>
+    <string name="logout">Logout</string>
+
+    <string name="project_info">This sample app implements MVP architecture using Dagger2, GreenDao, RxJava, FastAndroidNetworking and PlaceholderView</string>
+    <string name="link_mvp_blog">1. https://blog.mindorks.com</string>
+    <string name="link_mvp_repo">2. https://github.com/MindorksOpenSource/android-mvp-architecture</string>
+    <string name="link_mindorks_blog">3. https://blog.mindorks.com</string>
+    <string name="link_mindorks_repo">4. https://github.com/MindorksOpenSource</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="rating_message">Please let us know, how can we improve ourselves?</string>
+    <string name="rating_play_store_redirect_message_line_1">Awesome! Thank you for the 5 stars</string>
+    <string name="rating_play_store_redirect_message_line_2">Please help others, in knowing some good things about this app.</string>
+    <string name="later">Later</string>
+    <string name="submit">Submit</string>
+    <string name="rating_play_store_text">Rate us on Play Store</string>
+    <string name="rating_submitted_successfully">Rating submitted successfully</string>
 
 </resources>

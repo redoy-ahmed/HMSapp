@@ -75,8 +75,8 @@ class SignUpActivity : BaseActivity(), SignUpMVPView {
     private fun setOnClickListeners() {
 
         sign_up_button.setOnClickListener {
-            email = username_edtext.text.toString()
-            password = passwd_edtext.text.toString()
+            email = sign_up_edit_text_widget_mobile_number.text.toString()
+            password = sign_up_edit_text_widget_confirm_password.text.toString()
             presenter.onSignUpButtonClicked(email, password)
         }
     }

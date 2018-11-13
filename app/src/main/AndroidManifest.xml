@@ -35,6 +35,11 @@
         <activity android:name=".ui.signin.view.SignInActivity"/>
         <activity android:name=".ui.signup.view.SignUpActivity"/>
 
+        <activity
+                android:name=".ui.main.view.MainActivity"
+                android:theme="@style/AppTheme">
+        </activity>
+
 
         <meta-data
                 android:name="com.google.firebase.messaging.default_notification_channel_id"

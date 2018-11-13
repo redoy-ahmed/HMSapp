@@ -68,7 +68,7 @@ class SignInActivity : BaseActivity(), SignInMVPView {
     }
 
     private fun setOnClickListeners() {
-        login_button.setOnClickListener { presenter.onServerSignInClicked(sign_in_edit_text_widget_email.text.toString(), sign_in_edit_text_widget_password.text.toString()) }
+        sign_in_button.setOnClickListener { presenter.onServerSignInClicked(sign_in_edit_text_widget_mobile_number.text.toString(), sign_in_edit_text_widget_password.text.toString()) }
         //sign_up_login_text_view_forgot_password_button.setOnClickListener { openForgotPasswordActivity() }
     }
 

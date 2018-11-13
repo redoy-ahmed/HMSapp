@@ -1,5 +1,9 @@
 package com.example.redoyahmed.hmsapp.di.builder
 
+import com.example.redoyahmed.hmsapp.ui.about.AboutFragmentProvider
+import com.example.redoyahmed.hmsapp.ui.main.MainActivityModule
+import com.example.redoyahmed.hmsapp.ui.main.view.MainActivity
+import com.example.redoyahmed.hmsapp.ui.rate.RateUsDialogFragmentProvider
 import com.example.redoyahmed.hmsapp.ui.signin.SignInActivityModule
 import com.example.redoyahmed.hmsapp.ui.signin.view.SignInActivity
 import com.example.redoyahmed.hmsapp.ui.signup.SignUpActivityModule
@@ -23,10 +27,10 @@ abstract class ActivityBuilder {
     @ContributesAndroidInjector(modules = [(SignUpActivityModule::class)])
     abstract fun bindSignUpActivity(): SignUpActivity
 
-    /*@ContributesAndroidInjector(modules = [(MainActivityModule::class), (RateUsDialogFragmentProvider::class), (TaskFragmentProvider::class), (BrowseTaskFragmentProvider::class), (MyTaskFragmentProvider::class), (MessageFragmentProvider::class), (MoreFragmentProvider::class), (MyTaskListFragmentProvider::class)])
+    @ContributesAndroidInjector(modules = [(MainActivityModule::class), (RateUsDialogFragmentProvider::class), (AboutFragmentProvider::class)])
     abstract fun bindMainActivity(): MainActivity
 
-    @ContributesAndroidInjector(modules = [(TaskPostActivityModule::class), (TaskPostBudgetFragmentProvider::class), (TaskPostDetailsFragmentProvider::class), (TaskPostDueDateFragmentProvider::class)])
+    /*@ContributesAndroidInjector(modules = [(TaskPostActivityModule::class), (TaskPostBudgetFragmentProvider::class), (TaskPostDetailsFragmentProvider::class), (TaskPostDueDateFragmentProvider::class)])
     abstract fun bindTaskPostActivity(): TaskPostActivity
 
     @ContributesAndroidInjector(modules = [(TaskDetailsActivityModule::class)])
