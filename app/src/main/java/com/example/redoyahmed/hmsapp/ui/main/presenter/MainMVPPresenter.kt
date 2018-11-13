@@ -8,6 +8,5 @@ interface MainMVPPresenter<V : MainMVPView, I : MainMVPInteractor> : MVPPresente
 
     fun onDrawerOptionAboutClick() : Unit?
     fun onDrawerOptionRateUsClick(): Unit?
-    fun onDrawerOptionFeedClick(): Unit?
     fun onDrawerOptionLogoutClick()
 }

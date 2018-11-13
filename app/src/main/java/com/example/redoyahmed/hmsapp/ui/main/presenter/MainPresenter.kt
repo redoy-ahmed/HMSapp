@@ -16,8 +16,6 @@ class MainPresenter<V : MainMVPView, I : MainMVPInteractor> @Inject internal con
 
     override fun onDrawerOptionRateUsClick() = getView()?.openRateUsDialog()
 
-    override fun onDrawerOptionFeedClick() = getView()?.openFeedActivity()
-
     override fun onDrawerOptionAboutClick() = getView()?.openAboutFragment()
 
     override fun onDrawerOptionLogoutClick() {

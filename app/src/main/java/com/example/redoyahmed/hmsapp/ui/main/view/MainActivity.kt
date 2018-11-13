@@ -70,9 +70,6 @@ class MainActivity : BaseActivity(), MainMVPView, NavigationView.OnNavigationIte
             R.id.navItemRateUs -> {
                 presenter.onDrawerOptionRateUsClick()
             }
-            R.id.navItemFeed -> {
-                presenter.onDrawerOptionFeedClick()
-            }
             R.id.navItemLogout -> {
                 presenter.onDrawerOptionLogoutClick()
             }
@@ -100,7 +97,6 @@ class MainActivity : BaseActivity(), MainMVPView, NavigationView.OnNavigationIte
         lockDrawer()
         supportFragmentManager.addFragment(R.id.cl_root_view, AboutFragment.newInstance(), AboutFragment.TAG)
     }
-
 
     override fun openRateUsDialog() = RateUsDialog.newInstance().let {
         it?.show(supportFragmentManager)
