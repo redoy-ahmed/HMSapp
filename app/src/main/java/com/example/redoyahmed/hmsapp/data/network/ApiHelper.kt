@@ -9,18 +9,11 @@ interface ApiHelper {
     fun setAccessToken(token: String)
 
     //Start Area Authentication
-    fun performServerLogin(request: LoginRequest.ServerLoginRequest): Observable<LoginResponse>
+    fun performServerLogin(request: SignInRequest.ServerLoginRequest): Observable<SignInResponse>
 
     fun performServerSignUp(request: SignUpRequest.ServerSignUpRequest): Observable<SignUpResponse>
     fun performChangePasswordApiCall(request: ChangePasswordRequest.PasswordChangeRequest): Observable<ChangePasswordResponse>
 
-
-    fun performServerFacebookMobileSignUp(request: SignUpRequest.ServerFacebookMobileSignUpRequest): Observable<LoginResponse>
-    fun performServerMobileLoginCookie(request: SignUpRequest.ServerFacebookMobileSignUpRequest, okHttpResponseListener: OkHttpResponseListener)
-
-    fun performServerSocialLoginRegistration(request: LoginRequest.FacebookLoginRegistrationRequest): Observable<LoginResponse>
-
-    fun performServerSocialLoginCookie(request: LoginRequest.FacebookLoginRegistrationRequest, okHttpResponseListener: OkHttpResponseListener)
     ///End Area Authentication
 
 

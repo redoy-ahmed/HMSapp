@@ -9,11 +9,6 @@ import javax.inject.Inject
 
 class MainPresenter<V : MainMVPView, I : MainMVPInteractor> @Inject internal constructor(interactor: I, schedulerProvider: SchedulerProvider, disposable: CompositeDisposable) : BasePresenter<V, I>(interactor = interactor, schedulerProvider = schedulerProvider, compositeDisposable = disposable), MainMVPPresenter<V, I> {
 
-    override fun onAttach(view: V?) {
-        super.onAttach(view)
-        getUserData()
-    }
-
     override fun onDrawerOptionRateUsClick() = getView()?.openRateUsDialog()
 
     override fun onDrawerOptionAboutClick() = getView()?.openAboutFragment()
@@ -33,10 +28,5 @@ class MainPresenter<V : MainMVPView, I : MainMVPInteractor> @Inject internal con
                     }, { err -> println(err) }))
         }
 
-    }
-
-    private fun getUserData() = interactor?.let {
-        val userData = it.getUserDetails()
-        getView()?.inflateUserDetails(userData)
     }
 }

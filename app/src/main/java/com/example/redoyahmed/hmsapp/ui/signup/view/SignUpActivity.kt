@@ -46,8 +46,8 @@ class SignUpActivity : BaseActivity(), SignUpMVPView {
             AppConstants.EMPTY_EMAIL_ERROR -> Toast.makeText(this, getString(R.string.empty_email_error_message), Toast.LENGTH_LONG).show()
             AppConstants.INVALID_EMAIL_ERROR -> Toast.makeText(this, getString(R.string.invalid_email_error_message), Toast.LENGTH_LONG).show()
             AppConstants.EMPTY_PASSWORD_ERROR -> Toast.makeText(this, getString(R.string.empty_password_error_message), Toast.LENGTH_LONG).show()
-            AppConstants.LOGIN_FAILURE -> Toast.makeText(this, getString(R.string.login_failure), Toast.LENGTH_LONG).show()
-            AppConstants.EMPTY_MOBILENUMBER_ERROR -> Toast.makeText(this, getString(R.string.empty_mobile_error_message), Toast.LENGTH_LONG).show()
+            AppConstants.SIGNIN_FAILURE -> Toast.makeText(this, getString(R.string.sign_in_failure), Toast.LENGTH_LONG).show()
+            AppConstants.EMPTY_MOBILENUMBER_ERROR -> Toast.makeText(this, getString(R.string.empty_mobile_number_error_message), Toast.LENGTH_LONG).show()
             //AppConstants.SIGNUP_FAILURE_ALREADYACCOUNT -> CommonUtil.showShohokariAlertOkDialog(this, "Sign up Failed", getString(R.string.your_account_already_exists))
         }
     }

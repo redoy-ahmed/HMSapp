@@ -7,8 +7,5 @@ import javax.inject.Inject
 
 class MainInteractor @Inject internal constructor(preferenceHelper: PreferenceHelper, apiHelper: ApiHelper) : BaseInteractor(preferenceHelper = preferenceHelper, apiHelper = apiHelper), MainMVPInteractor {
 
-    override fun getUserDetails() = Pair(preferenceHelper.getCurrentUserName(),
-        preferenceHelper.getCurrentUserEmail())
-
     override fun makeLogoutApiCall() = apiHelper.performLogoutApiCall()
 }

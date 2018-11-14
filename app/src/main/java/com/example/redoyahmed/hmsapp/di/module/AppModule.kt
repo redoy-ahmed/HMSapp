@@ -38,17 +38,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    internal fun provideProtectedApiHeader(@ApiKeyInfo apiKey: String, preferenceHelper: PreferenceHelper)
-            : ApiHeader.ProtectedApiHeader = ApiHeader.ProtectedApiHeader(apiKey = apiKey,
-        userId = preferenceHelper.getCurrentUserId(),
-        accessToken = preferenceHelper.getAccessToken())
-
-
-    @Provides
-    @Singleton
-    internal fun providePrivateApiHeader(@ApiKeyInfo apiKey: String, preferenceHelper: PreferenceHelper)
-            : ApiHeader.PrivateApiHeader = ApiHeader.PrivateApiHeader(cookieKey = preferenceHelper.getAccessCookie())
-
+    internal fun provideProtectedApiHeader(@ApiKeyInfo apiKey: String, preferenceHelper: PreferenceHelper): ApiHeader.ProtectedApiHeader = ApiHeader.ProtectedApiHeader(apiKey = apiKey, userId = preferenceHelper.getCurrentUserID(), accessToken = preferenceHelper.getCurrentUserAccessToken())
 
     @Provides
     @Singleton
@@ -59,6 +49,4 @@ class AppModule {
 
     @Provides
     internal fun provideSchedulerProvider(): SchedulerProvider = SchedulerProvider()
-
-
 }

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.example.redoyahmed.hmsapp.R
 
 object CommonUtil {
@@ -26,6 +27,13 @@ object CommonUtil {
             dialog.dismiss()
         }
         return builder.create()
+    }
+
+    fun showErrorDialog(activity: Activity?, title: String?, message: String?) {
+        SweetAlertDialog(activity, SweetAlertDialog.ERROR_TYPE)
+            .setTitleText(title)
+            .setContentText(message)
+            .show()
     }
 
     /*fun showSharingDialog(context: Activity?, task: Task) {

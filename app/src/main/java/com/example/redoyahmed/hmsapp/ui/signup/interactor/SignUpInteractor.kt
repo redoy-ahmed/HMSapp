@@ -12,9 +12,9 @@ class SignUpInteractor @Inject internal constructor(preferenceHelper: Preference
     override fun doServerSignUpApiCall(email: String, password: String) =
             apiHelper.performServerSignUp(SignUpRequest.ServerSignUpRequest(email, password, password, "", "", "True", 0, "", "", "", "", "", "", "", ""))
 
-    override fun updateUserInSharedPref(UserId: Long, email: String, password: String) =
+    override fun updateUserInSharedPref(UserId: String, email: String, password: String) =
             preferenceHelper.let {
-                it.setCurrentUserId(UserId)
+                it.setCurrentUserID(UserId)
                 it.setCurrentUserEmail(email)
                 it.setCurrentUserPassword(password)
             }

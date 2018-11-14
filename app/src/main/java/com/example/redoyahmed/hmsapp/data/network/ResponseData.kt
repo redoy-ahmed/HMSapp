@@ -3,9 +3,6 @@ package com.example.redoyahmed.hmsapp.data.network
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-/**
- * Created by jyotidubey on 17/01/18.
- */
 data class ResponseData(
 
         @Expose

@@ -38,7 +38,7 @@ object AppConstants {
     internal val EMPTY_EMAIL_ERROR = 1001
     internal val INVALID_EMAIL_ERROR = 1002
     internal val EMPTY_PASSWORD_ERROR = 1003
-    internal val LOGIN_FAILURE = 1004
+    internal val SIGNIN_FAILURE = 1004
     internal val SIGNUP_FAILURE_ALREADYACCOUNT = 1005
 
 
@@ -46,7 +46,7 @@ object AppConstants {
 
     internal val EMPTY_FIRST_NAME_ERROR = 5001
     internal val EMPTY_LAST_NAME_ERROR = 5002
-    internal val EMPTY_MOBILE_NUMBER_ERROR = 5004
+    internal val EMPTY_EMAIL_NUMBER_ERROR = 5004
     internal val EMPTY_ADDRESS_ERROR = 5003
     internal val EMPTY_DATE_OF_BIRTH_ERROR = 5005
 

@@ -19,21 +19,22 @@
     <string name="ak_login_protocol_scheme">390539151417201</string>
 
 
-    <string name="empty_email_error_message">Email cannot be blank</string>
-    <string name="invalid_email_error_message">Please Enter a valid email address</string>
     <string name="empty_password_error_message">Password cannot be empty</string>
-    <string name="empty_mobile_error_message">Mobile Number cannot be empty</string>
-    <string name="login_failure">Login failed</string>
+    <string name="empty_email_error_message">Email cannot be empty</string>
+    <string name="empty_mobile_number_error_message">Mobile number cannot be empty</string>
+    <string name="invalid_email_error_message">Please Enter a valid email</string>
+    <string name="sign_in_failure">Sign In failed</string>
 
     <!--Sign In messages-->
     <string name="sign_in_screen_title">Sign In</string>
-    <string name="mobile_number_hint">Mobile Number</string>
+    <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
     <string name="sig_in_button_text">Sign In</string>
 
     <!--Sign up messages-->
     <string name="sign_up">Sign Up</string>
     <string name="user_name">Name</string>
+    <string name="mobile_number_hint">Mobile Number</string>
     <string name="user_location">Location</string>
     <string name="user_gender">Gender</string>
     <string name="user_password">Password</string>

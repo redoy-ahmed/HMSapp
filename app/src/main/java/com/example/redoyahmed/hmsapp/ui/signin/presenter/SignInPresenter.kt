@@ -1,6 +1,6 @@
 package com.example.redoyahmed.hmsapp.ui.signin.presenter
 
-import com.example.redoyahmed.hmsapp.data.network.LoginResponse
+import com.example.redoyahmed.hmsapp.data.network.SignInResponse
 import com.example.redoyahmed.hmsapp.ui.base.presenter.BasePresenter
 import com.example.redoyahmed.hmsapp.ui.signin.interactor.SignInMVPInteractor
 import com.example.redoyahmed.hmsapp.ui.signin.view.SignInMVPView
@@ -20,23 +20,28 @@ class SignInPresenter<V : SignInMVPView, I : SignInMVPInteractor> @Inject intern
                 interactor?.let {
                     compositeDisposable.add(it.serverSignInApiCall(email, password)
                         .compose(schedulerProvider.ioToMainObservableScheduler())
-                        .subscribe({ loginResponse ->
+                        .subscribe({ signInResponse ->
                             getView()?.hideProgress()
-                            if (loginResponse.responseData?.user != null && loginResponse.responseData?.user!!.Id > 0) {
-                                updateUserInSharedPref(loginResponse = loginResponse, loggedInMode = AppConstants.LoggedInMode.LOGGED_IN_MODE_SERVER)
+                            if (signInResponse.responseData?.user != null && signInResponse.responseData?.user!!.Id != null) {
+                                updateUserInSharedPref(
+                                    signInResponse = signInResponse,
+                                    loggedInMode = AppConstants.LoggedInMode.LOGGED_IN_MODE_SERVER
+                                )
                                 getView()?.openMainActivity()
                             } else {
-                                getView()?.showLogInErrors(AppConstants.LOGIN_FAILURE.toString())
+                                getView()?.showLogInErrors(AppConstants.SIGNIN_FAILURE.toString())
                             }
 
                         }, { err ->
                             getView()?.hideProgress()
-                        }))
+                        })
+                    )
                 }
 
             }
         }
     }
 
-    private fun updateUserInSharedPref(loginResponse: LoginResponse, loggedInMode: AppConstants.LoggedInMode) = interactor?.updateUserInSharedPref(loginResponse, loggedInMode)
+    private fun updateUserInSharedPref(signInResponse: SignInResponse, loggedInMode: AppConstants.LoggedInMode) =
+        interactor?.updateUserInSharedPref(signInResponse, loggedInMode)
 }

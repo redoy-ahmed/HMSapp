@@ -3,14 +3,14 @@ package com.example.redoyahmed.hmsapp.data.network
 
 object ApiEndPoint {
 
-    val ENDPOINT_SERVER_SHOHOKARI_BASE_URL = "https://shohokari.com/"
+    val ENDPOINT_SERVER_SHOHOKARI_BASE_URL = "https://10.0.2.2/"
     val ENDPOINT_SERVER_SHOHOKARI_BASE_API_URL = "https://shohokari.com/"
     val ENDPOINT_SERVER_SHOHOKARI_PUBLIC_URL = "https://shohokari.com/public-profile/"
     val ENDPOINT_SERVER_SHOHOKARI_TASK_URL = "https://shohokari.com/tasks/"
 
     //Start Area Authentication
 
-    val ENDPOINT_SERVER_SHOHOKARI_LOGIN = "https://shohokari.com/api/authentication/login"
+    val ENDPOINT_SERVER_SHOHOKARI_LOGIN = "https://10.0.2.2/api/login"
     val ENDPOINT_SERVER_SHOHOKARI_LOGOUT = "https://shohokari.com/api/authentication/logout"
     const val ENDPOINT_SERVER_SHOHOKARI_SIGN_UP = "https://shohokari.com/api/authentication/register"
     const val ENDPOINT_SERVER_SHOHOKARI_MOBILELOGINREGISTRATION = "https://shohokari.com/api/authentication/loginregistrationfacebookmobile"
@@ -163,5 +163,4 @@ object ApiEndPoint {
     const val ENDPOINT_SERVER_SHOHOKARI_PUBLIC_PROFILE_INFO_GET = "https://shohokari.com/api/users/get/"
 
     const val ENDPOINT_SERVER_SHOHOKARI_TASK_REVIEW_GET = "https://shohokari.com/api/userrating/getuserratingbytaskId"
-
 }

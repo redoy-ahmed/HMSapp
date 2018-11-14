@@ -9,5 +9,5 @@ interface SignUpMVPInteractor : MVPInteractor {
 
     fun doServerSignUpApiCall(email: String, password: String): Observable<SignUpResponse>
 
-    fun updateUserInSharedPref(UserId: Long, email: String, password: String)
+    fun updateUserInSharedPref(UserId: String, email: String, password: String)
 }

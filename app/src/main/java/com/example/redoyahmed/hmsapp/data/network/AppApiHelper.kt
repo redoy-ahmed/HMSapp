@@ -17,12 +17,12 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
 
     //Start Area Authentication
 
-    override fun performServerLogin(request: LoginRequest.ServerLoginRequest): Observable<LoginResponse> =
+    override fun performServerLogin(request: SignInRequest.ServerLoginRequest): Observable<SignInResponse> =
             Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_LOGIN)
                     .addHeaders(apiHeader.publicApiHeader)
                     .addBodyParameter(request)
                     .build()
-                    .getObjectObservable(LoginResponse::class.java)
+                    .getObjectObservable(SignInResponse::class.java)
 
     override fun performLogoutApiCall(): Observable<LogoutResponse> =
             Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_LOGOUT)
@@ -39,47 +39,6 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
                 .build()
                 .getObjectObservable(SignUpResponse::class.java)
     }
-
-
-    override fun performServerSocialLoginRegistration(request: LoginRequest.FacebookLoginRegistrationRequest): Observable<LoginResponse> {
-
-
-        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_FACEBOOK_LINKEDIN_REGISTRATION_LOGIN)
-                .addHeaders(apiHeader.publicApiHeader)
-                .addBodyParameter(request)
-                .build()
-                .getObjectObservable(LoginResponse::class.java)
-    }
-    override fun performServerFacebookMobileSignUp(request: SignUpRequest.ServerFacebookMobileSignUpRequest): Observable<LoginResponse> {
-
-        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_MOBILELOGINREGISTRATION)
-                .addHeaders(apiHeader.publicApiHeader)
-                .addBodyParameter(request)
-                .build()
-                .getObjectObservable(LoginResponse::class.java)
-
-    }
-
-
-    override fun performServerMobileLoginCookie(request: SignUpRequest.ServerFacebookMobileSignUpRequest, okHttpResponseListener: OkHttpResponseListener) {
-
-        Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_MOBILELOGINREGISTRATION)
-                .addHeaders(apiHeader.publicApiHeader)
-                .addBodyParameter(request)
-                .build()
-                .getAsOkHttpResponse(okHttpResponseListener)
-    }
-
-
-    override fun performServerSocialLoginCookie(request: LoginRequest.FacebookLoginRegistrationRequest, okHttpResponseListener: OkHttpResponseListener) {
-
-        Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_FACEBOOK_LINKEDIN_REGISTRATION_LOGIN)
-                .addHeaders(apiHeader.publicApiHeader)
-                .addBodyParameter(request)
-                .build()
-                .getAsOkHttpResponse(okHttpResponseListener)
-    }
-
 
     ///End Area Authentication
 
