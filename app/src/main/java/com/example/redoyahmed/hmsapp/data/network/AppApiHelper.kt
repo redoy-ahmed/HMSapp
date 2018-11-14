@@ -19,7 +19,7 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
 
     override fun performServerLogin(request: SignInRequest.ServerLoginRequest): Observable<SignInResponse> =
             Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_LOGIN)
-                    .addHeaders(apiHeader.publicApiHeader)
+                    //.addHeaders(apiHeader.publicApiHeader)
                     .addBodyParameter(request)
                     .build()
                     .getObjectObservable(SignInResponse::class.java)

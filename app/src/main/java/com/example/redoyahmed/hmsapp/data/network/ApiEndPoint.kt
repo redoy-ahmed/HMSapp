@@ -10,7 +10,7 @@ object ApiEndPoint {
 
     //Start Area Authentication
 
-    val ENDPOINT_SERVER_SHOHOKARI_LOGIN = "https://10.0.2.2/api/login"
+    val ENDPOINT_SERVER_SHOHOKARI_LOGIN = "http://10.0.2.2:8080/api/login"
     val ENDPOINT_SERVER_SHOHOKARI_LOGOUT = "https://shohokari.com/api/authentication/logout"
     const val ENDPOINT_SERVER_SHOHOKARI_SIGN_UP = "https://shohokari.com/api/authentication/register"
     const val ENDPOINT_SERVER_SHOHOKARI_MOBILELOGINREGISTRATION = "https://shohokari.com/api/authentication/loginregistrationfacebookmobile"
