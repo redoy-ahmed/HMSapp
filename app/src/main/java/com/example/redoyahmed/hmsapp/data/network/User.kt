@@ -7,8 +7,8 @@ import com.google.gson.annotations.SerializedName
 data class User(
 
     @Expose
-    @SerializedName("user_id")
-    var Id: String? = null,
+    @SerializedName("userId")
+    var userId: String? = null,
 
     @Expose
     @SerializedName("username")
@@ -32,5 +32,9 @@ data class User(
 
     @Expose
     @SerializedName("token")
-    var Token: String? = null
+    var Token: String? = null,
+
+    @Expose
+    @SerializedName("roles")
+    var roles: List<Task>? = null
 )

@@ -22,7 +22,7 @@ class SignInPresenter<V : SignInMVPView, I : SignInMVPInteractor> @Inject intern
                         .compose(schedulerProvider.ioToMainObservableScheduler())
                         .subscribe({ signInResponse ->
                             getView()?.hideProgress()
-                            if (signInResponse.responseData?.user != null && signInResponse.responseData?.user!!.Id != null) {
+                            if (signInResponse.responseData?.user != null && signInResponse.responseData?.user!!.userId != null) {
                                 updateUserInSharedPref(
                                     signInResponse = signInResponse,
                                     loggedInMode = AppConstants.LoggedInMode.LOGGED_IN_MODE_SERVER

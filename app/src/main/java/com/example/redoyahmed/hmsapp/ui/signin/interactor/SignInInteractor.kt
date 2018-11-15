@@ -15,7 +15,7 @@ class SignInInteractor @Inject internal constructor(preferenceHelper: Preference
 
     override fun updateUserInSharedPref(signInResponse: SignInResponse, loggedInMode: AppConstants.LoggedInMode) =
         preferenceHelper.let {
-            it.setCurrentUserID(signInResponse.responseData?.user?.Id)
+            it.setCurrentUserID(signInResponse.responseData?.user?.userId)
             it.setCurrentUserMobileNumber(signInResponse.responseData?.user?.Mobile)
             it.setCurrentUserName(signInResponse.responseData?.user?.Email)
             it.setCurrentUserPassword(signInResponse.responseData?.user?.Password)

@@ -23,7 +23,7 @@ class SignUpPresenter<V : SignUpMVPView, I : SignUpMVPInteractor> @Inject intern
                                 getView()?.hideProgress()
 
                                 if (signUpResponse.Success) {
-                                    it.updateUserInSharedPref(signUpResponse.responseData!!.user!!.Id!!, email, password)
+                                    it.updateUserInSharedPref(signUpResponse.responseData!!.user!!.userId!!, email, password)
                                     getView()?.openCreateProfileActivity()
                                 } else {
                                     val builder = StringBuilder()

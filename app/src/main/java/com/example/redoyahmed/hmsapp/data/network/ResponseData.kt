@@ -6,10 +6,10 @@ import com.google.gson.annotations.SerializedName
 data class ResponseData(
 
         @Expose
-        @SerializedName("User")
-        var user: User? = null,
+        @SerializedName("user")
+        var user: User? = null
 
-        @Expose
+        /*@Expose
         @SerializedName("Locations")
         var taskList: List<Task>? = null,
 
@@ -137,5 +137,5 @@ data class ResponseData(
 
         @Expose
         @SerializedName("EntityProperty")
-        var entityProperty: EntityProperty? = null
+        var entityProperty: EntityProperty? = null*/
 )
