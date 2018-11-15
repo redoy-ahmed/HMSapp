@@ -44,10 +44,10 @@
     <string name="forgot_password_screen_title">Forgot Password</string>
 
     <!--Navigation Drawer Items-->
-    <string name="about">About</string>
-    <string name="rate_us">Rate Us</string>
-    <string name="feed">Feed</string>
-    <string name="logout">Logout</string>
+    <string name="navigation_drawer_home_label">Home</string>
+    <string name="navigation_drawer_about_label">About</string>
+    <string name="navigation_drawer_rate_us_label">Rate Us</string>
+    <string name="navigation_drawer_log_out_label">Logout</string>
 
     <string name="project_info">This sample app implements MVP architecture using Dagger2, GreenDao, RxJava, FastAndroidNetworking and PlaceholderView</string>
     <string name="link_mvp_blog">1. https://blog.mindorks.com</string>

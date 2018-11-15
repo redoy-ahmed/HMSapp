@@ -1,6 +1,7 @@
 package com.example.redoyahmed.hmsapp.di.builder
 
 import com.example.redoyahmed.hmsapp.ui.about.AboutFragmentProvider
+import com.example.redoyahmed.hmsapp.ui.home.HomeFragmentProvider
 import com.example.redoyahmed.hmsapp.ui.main.MainActivityModule
 import com.example.redoyahmed.hmsapp.ui.main.view.MainActivity
 import com.example.redoyahmed.hmsapp.ui.rate.RateUsDialogFragmentProvider
@@ -27,7 +28,7 @@ abstract class ActivityBuilder {
     @ContributesAndroidInjector(modules = [(SignUpActivityModule::class)])
     abstract fun bindSignUpActivity(): SignUpActivity
 
-    @ContributesAndroidInjector(modules = [(MainActivityModule::class), (RateUsDialogFragmentProvider::class), (AboutFragmentProvider::class)])
+    @ContributesAndroidInjector(modules = [(MainActivityModule::class), (HomeFragmentProvider::class), (RateUsDialogFragmentProvider::class), (AboutFragmentProvider::class)])
     abstract fun bindMainActivity(): MainActivity
 
     /*@ContributesAndroidInjector(modules = [(TaskPostActivityModule::class), (TaskPostBudgetFragmentProvider::class), (TaskPostDetailsFragmentProvider::class), (TaskPostDueDateFragmentProvider::class)])
