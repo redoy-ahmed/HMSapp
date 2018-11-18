@@ -69,6 +69,12 @@
     <string name="rating_play_store_text">Rate us on Play Store</string>
     <string name="rating_submitted_successfully">Rating submitted successfully</string>
 
+    <!--Home Screen Items-->
+    <string name="home_info_general_information">General Information</string>
+    <string name="home_info_no_of_beds_available">Available Beds</string>
+    <string name="home_info_no_of_reports_to_be_delivered">Reports To Be Delivered</string>
+    <string name="home_info_no_of_blood_bags_available">Available Blood Bags</string>
+
     <string name="received">Received</string>
     <string name="savings_information">Savings Information</string>
     <string name="no_of_savings">Number of savings</string>

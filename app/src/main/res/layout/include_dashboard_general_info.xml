@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp10"
             android:layout_marginBottom="@dimen/dp10"
-            android:text="General Information"/>
+            android:text="@string/home_info_general_information"/>
     <LinearLayout
             android:orientation="horizontal"
             android:background="@drawable/dashboard_background"
@@ -52,7 +52,7 @@
                             android:textColor="@color/white"
                             android:gravity="center_horizontal"
                             android:layout_gravity="center_horizontal"
-                            android:id="@+id/tvHospitalName"
+                            android:id="@+id/tvAllotedBedCount"
                             android:padding="@dimen/dp2"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="User"
+                            android:text="@string/home_info_no_of_beds_available"
                             android:layout_weight="1.0"/>
                 </LinearLayout>
             </RelativeLayout>
@@ -96,7 +96,7 @@
                             android:textSize="@dimen/dp12"
                             android:textColor="@color/white"
                             android:layout_gravity="center_horizontal"
-                            android:id="@+id/tvBedCount"
+                            android:id="@+id/tvReportsToBeDeliveredCount"
                             android:padding="@dimen/dp2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BEDS"
+                            android:text="@string/home_info_no_of_reports_to_be_delivered"
                             android:layout_weight="1.0"/>
                 </LinearLayout>
             </RelativeLayout>
@@ -140,7 +140,7 @@
                             android:textSize="@dimen/dp12"
                             android:textColor="@color/white"
                             android:layout_gravity="center_horizontal"
-                            android:id="@+id/tvReportsCount"
+                            android:id="@+id/tvBloodsAvailableCount"
                             android:padding="@dimen/dp2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -152,7 +152,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="REPORTS"
+                            android:text="@string/home_info_no_of_blood_bags_available"
                             android:layout_weight="1.0"/>
                 </LinearLayout>
                 <View android:background="@color/dashboard_line"
