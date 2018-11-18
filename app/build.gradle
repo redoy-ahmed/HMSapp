@@ -146,6 +146,8 @@ dependencies {
     }
     implementation 'com.github.devsideal:ReadMoreOption:1.0.0'
     implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
 }
 
 repositories {

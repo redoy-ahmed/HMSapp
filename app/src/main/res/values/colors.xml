@@ -147,6 +147,14 @@
   <color name="dot_light_screen3">#93c6fd</color>
   <color name="dot_light_screen4">#e4b5fc</color>
 
+  <color name="dashboard_blue">#ff3da1cc</color>
+  <color name="dashboard_green">#ffa8cc66</color>
+  <color name="dashboard_grey">#ffeeeeee</color>
+  <color name="dashboard_line">#ffcccccc</color>
+  <color name="dashboard_orange">#ffff734c</color>
+  <color name="dashboard_text_dark">#ff4a4a4a</color>
+  <color name="dashboard_text_light">#ff808080</color>
+
   <array name="array_dot_active">
     <item>@color/colorPrimaryDark</item>
     <item>@color/colorPrimaryDark</item>

@@ -49,6 +49,9 @@
     <string name="navigation_drawer_rate_us_label">Rate Us</string>
     <string name="navigation_drawer_log_out_label">Logout</string>
 
+    <string name="about_screen_title">About</string>
+    <string name="rate_us_screen_title">Rate Us</string>
+
     <string name="project_info">This sample app implements MVP architecture using Dagger2, GreenDao, RxJava, FastAndroidNetworking and PlaceholderView</string>
     <string name="link_mvp_blog">1. https://blog.mindorks.com</string>
     <string name="link_mvp_repo">2. https://github.com/MindorksOpenSource/android-mvp-architecture</string>
@@ -65,5 +68,18 @@
     <string name="submit">Submit</string>
     <string name="rating_play_store_text">Rate us on Play Store</string>
     <string name="rating_submitted_successfully">Rating submitted successfully</string>
+
+    <string name="received">Received</string>
+    <string name="savings_information">Savings Information</string>
+    <string name="no_of_savings">Number of savings</string>
+    <string name="deposit">Deposit</string>
+    <string name="refund">Refund</string>
+    <string name="balance">Balance</string>
+    <string name="loan_information">Loan Information</string>
+    <string name="no_of_loan">Number of loans</string>
+    <string name="recoverable">Recoverable</string>
+    <string name="recovery">Recovery</string>
+    <string name="payment">Payment</string>
+    <string name="cash">Cash in hand</string>
 
 </resources>
