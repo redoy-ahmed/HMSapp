@@ -52,18 +52,19 @@
                             android:textColor="@color/white"
                             android:gravity="center_horizontal"
                             android:layout_gravity="center_horizontal"
-                            android:id="@+id/tvMfiName"
+                            android:id="@+id/tvHospitalName"
                             android:padding="@dimen/dp2"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="" android:layout_weight="1.0"/>
+                            android:text=""
+                            android:layout_weight="1.0"/>
                     <TextView
                             android:textSize="@dimen/dp8"
                             android:textColor="@color/dashboard_text_light"
                             android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BRANCH"
+                            android:text="User"
                             android:layout_weight="1.0"/>
                 </LinearLayout>
             </RelativeLayout>
@@ -95,18 +96,19 @@
                             android:textSize="@dimen/dp12"
                             android:textColor="@color/white"
                             android:layout_gravity="center_horizontal"
-                            android:id="@+id/tvSamityCount"
+                            android:id="@+id/tvBedCount"
                             android:padding="@dimen/dp2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="" android:layout_weight="1.0"/>
+                            android:text=""
+                            android:layout_weight="1.0"/>
                     <TextView
                             android:textSize="@dimen/dp8"
                             android:textColor="@color/dashboard_text_light"
                             android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="SAMITY"
+                            android:text="BEDS"
                             android:layout_weight="1.0"/>
                 </LinearLayout>
             </RelativeLayout>
@@ -138,18 +140,19 @@
                             android:textSize="@dimen/dp12"
                             android:textColor="@color/white"
                             android:layout_gravity="center_horizontal"
-                            android:id="@+id/tvMemberCount"
+                            android:id="@+id/tvReportsCount"
                             android:padding="@dimen/dp2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="" android:layout_weight="1.0"/>
+                            android:text=""
+                            android:layout_weight="1.0"/>
                     <TextView
                             android:textSize="@dimen/dp8"
                             android:textColor="@color/dashboard_text_light"
                             android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="MEMBER"
+                            android:text="REPORTS"
                             android:layout_weight="1.0"/>
                 </LinearLayout>
                 <View android:background="@color/dashboard_line"
