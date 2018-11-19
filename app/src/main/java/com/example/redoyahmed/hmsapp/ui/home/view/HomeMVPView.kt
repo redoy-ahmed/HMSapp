@@ -5,5 +5,5 @@ import com.example.redoyahmed.hmsapp.ui.base.view.MVPView
 interface HomeMVPView : MVPView {
 
     fun showValidationMessage(errorCode: Int)
-    fun showDashboardDataToView(category : String)
+    fun loadGeneralInfo(category : String)
 }

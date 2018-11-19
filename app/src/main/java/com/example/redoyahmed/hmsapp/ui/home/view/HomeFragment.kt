@@ -52,7 +52,7 @@ class HomeFragment : BaseFragment(), HomeMVPView {
 
     }
 
-    override fun showDashboardDataToView(category: String) {
+    override fun loadGeneralInfo(category: String) {
 
     }
 }

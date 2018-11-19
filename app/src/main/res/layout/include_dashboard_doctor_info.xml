@@ -8,13 +8,15 @@
         android:layout_marginTop="@dimen/dp5"
         android:layout_marginRight="@dimen/dp10"
         android:layout_marginBottom="@dimen/dp5">
+
     <TextView
             android:textSize="@dimen/dp13"
-            android:id="@+id/tvSavings"
+            android:id="@+id/tvDoctorsInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp10"
-            android:text="@string/savings_information"/>
+            android:text="@string/home_info_doctors_information"/>
+
     <LinearLayout
             android:orientation="horizontal"
             android:background="@color/white"
@@ -22,30 +24,35 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:weightSum="2.0">
+
         <RelativeLayout
                 android:layout_width="0.0dip"
                 android:layout_height="160.0dip"
                 android:layout_weight="1.0">
+
             <TextView
                     android:textSize="@dimen/dp11"
                     android:textColor="@color/colorPrimary"
-                    android:id="@+id/tvTitle"
+                    android:id="@+id/tvDoctorsAvailable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_savings"
+                    android:text="@string/home_info_doctors_available"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"/>
+
             <TextView
                     android:textSize="@dimen/dp11"
                     android:textColor="@color/colorPrimary"
                     android:gravity="center"
-                    android:id="@+id/tvTotalSaving"
+                    android:id="@+id/tvTotalDoctorsAvailable"
                     android:background="@drawable/rounded_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
-                    android:text="0" android:layout_below="@id/tvTitle"
+                    android:text="0"
+                    android:layout_below="@id/tvDoctorsAvailable"
                     android:layout_centerHorizontal="true"/>
+
             <LinearLayout
                     android:orientation="vertical"
                     android:paddingLeft="@dimen/dp5"
@@ -53,96 +60,141 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true">
+
                 <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:weightSum="1.0">
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
-                            android:text="@string/deposit"
+                            android:text="@string/home_info_doctors_department_1"
                             android:layout_weight="0.5"/>
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
                             android:text=":"
                             android:layout_weight="0.1"/>
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:textColor="@color/colorAccent"
                             android:gravity="right"
-                            android:id="@+id/tvDeposit"
+                            android:id="@+id/tvDoctorDepartment_1"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
-                            android:text="0 Tk"
+                            android:text="0"
                             android:layout_weight="0.4"/>
                 </LinearLayout>
+
                 <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content">
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
-                            android:text="@string/refund"
+                            android:text="@string/home_info_doctors_department_2"
                             android:layout_weight="0.5"/>
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
                             android:text=":"
                             android:layout_weight="0.1"/>
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:textColor="@color/colorAccent"
                             android:gravity="right"
-                            android:id="@+id/tvRefund"
+                            android:id="@+id/tvDoctorDepartment_2"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
-                            android:text="0 Tk"
+                            android:text="0"
                             android:layout_weight="0.4"/>
                 </LinearLayout>
+
                 <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content">
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
-                            android:text="@string/balance"
+                            android:text="@string/home_info_doctors_department_3"
                             android:layout_weight="0.5"/>
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
                             android:text=":"
                             android:layout_weight="0.1"/>
+
                     <TextView
                             android:textSize="@dimen/dp11"
                             android:textColor="@color/colorAccent"
                             android:gravity="right"
-                            android:id="@+id/tvBalance"
+                            android:id="@+id/tvDoctorDepartment_3"
                             android:layout_width="0.0dip"
                             android:layout_height="fill_parent"
-                            android:text="0 Tk"
+                            android:text="0"
+                            android:layout_weight="0.4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:textSize="@dimen/dp11"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:text="@string/home_info_doctors_department_4"
+                            android:layout_weight="0.5"/>
+
+                    <TextView
+                            android:textSize="@dimen/dp11"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:text=":"
+                            android:layout_weight="0.1"/>
+
+                    <TextView
+                            android:textSize="@dimen/dp11"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="right"
+                            android:id="@+id/tvDoctorDepartment_4"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:text="0"
                             android:layout_weight="0.4"/>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
+
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0">
+
             <View android:background="@color/dashboard_line"
                   android:layout_width="1.0dip"
                   android:layout_height="160.0dip"
                   android:layout_alignParentRight="true"/>
+
             <com.github.mikephil.charting.charts.PieChart
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/pie_chart_savings"

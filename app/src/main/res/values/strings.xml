@@ -5,9 +5,7 @@
     <string name="dialog_default_negative_button_label">Cancel</string>
     <string name="dialog_default_positive_button_label">OK</string>
 
-    <string name="dialog_network_unavailable_message_check_and_try_again">Please check your internet connection and try
-        again
-    </string>
+    <string name="dialog_network_unavailable_message_check_and_try_again">Please check your internet connection and try again</string>
     <string name="dialog_network_unavailable_message_retry">Try again?</string>
 
     <string name="google_api_key_1">AIzaSyCVnZfSs-k2wudCOxwpouRMAhfYVQi2o-k</string>
@@ -75,17 +73,18 @@
     <string name="home_info_no_of_reports_to_be_delivered">Reports To Be Delivered</string>
     <string name="home_info_no_of_blood_bags_available">Available Blood Bags</string>
 
-    <string name="received">Received</string>
-    <string name="savings_information">Savings Information</string>
-    <string name="no_of_savings">Number of savings</string>
-    <string name="deposit">Deposit</string>
-    <string name="refund">Refund</string>
-    <string name="balance">Balance</string>
-    <string name="loan_information">Loan Information</string>
-    <string name="no_of_loan">Number of loans</string>
-    <string name="recoverable">Recoverable</string>
-    <string name="recovery">Recovery</string>
-    <string name="payment">Payment</string>
-    <string name="cash">Cash in hand</string>
+    <string name="home_info_doctors_information">Doctors Information</string>
+    <string name="home_info_doctors_available">Doctors Available</string>
+    <string name="home_info_doctors_department_1">Anesthesiology</string>
+    <string name="home_info_doctors_department_2">Laboratory</string>
+    <string name="home_info_doctors_department_3">Therapy</string>
+    <string name="home_info_doctors_department_4">Surgery</string>
+
+    <string name="home_info_appointment_information">Appointment Information</string>
+    <string name="home_info_appointment_total_appointments">Total Appointments</string>
+    <string name="home_info_appointment_department_1">Anesthesiology</string>
+    <string name="home_info_appointment_department_2">Laboratory</string>
+    <string name="home_info_appointment_department_3">Therapy</string>
+    <string name="home_info_appointment_department_4">Surgery</string>
 
 </resources>

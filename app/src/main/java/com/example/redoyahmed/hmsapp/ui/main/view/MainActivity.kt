@@ -109,6 +109,7 @@ class MainActivity : BaseActivity(), MainMVPView, NavigationView.OnNavigationIte
         val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+        navView.setCheckedItem(0)
         navView.setNavigationItemSelectedListener(this)
     }
 
