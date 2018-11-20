@@ -38,7 +38,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    internal fun provideProtectedApiHeader(@ApiKeyInfo apiKey: String, preferenceHelper: PreferenceHelper): ApiHeader.ProtectedApiHeader = ApiHeader.ProtectedApiHeader(apiKey = apiKey, userId = preferenceHelper.getCurrentUserID(), accessToken = preferenceHelper.getCurrentUserAccessToken())
+    internal fun providePrivateApiHeader(preferenceHelper: PreferenceHelper): ApiHeader.PrivateApiHeader = ApiHeader.PrivateApiHeader(accessToken = preferenceHelper.getCurrentUserAccessToken())
 
     @Provides
     @Singleton

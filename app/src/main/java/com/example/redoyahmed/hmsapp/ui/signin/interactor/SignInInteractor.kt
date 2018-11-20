@@ -22,6 +22,7 @@ class SignInInteractor @Inject internal constructor(preferenceHelper: Preference
             it.setCurrentUserAddress(signInResponse.responseData?.user?.Address)
             it.setCurrentUserGender(signInResponse.responseData?.user?.Gender)
             it.setCurrentUserAccessToken(signInResponse.responseData?.user?.Token)
+            it.setCurrentUserLggedIn(true)
         }
 }
 
