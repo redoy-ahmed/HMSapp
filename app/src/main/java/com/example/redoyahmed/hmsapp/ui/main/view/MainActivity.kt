@@ -66,7 +66,7 @@ class MainActivity : BaseActivity(), MainMVPView, NavigationView.OnNavigationIte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.navItemHome -> {
-                presenter.onDrawerOptionAboutClick()
+                presenter.onDrawerOptionHomeClick()
             }
             R.id.navItemAbout -> {
                 presenter.onDrawerOptionAboutClick()
