@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.os.Handler
 import com.example.redoyahmed.hmsapp.R
 import com.example.redoyahmed.hmsapp.ui.base.view.BaseActivity
+import com.example.redoyahmed.hmsapp.ui.main.view.MainActivity
 import com.example.redoyahmed.hmsapp.ui.signin.view.SignInActivity
 import com.example.redoyahmed.hmsapp.ui.splash.interactor.SplashMVPInteractor
 import com.example.redoyahmed.hmsapp.ui.splash.presenter.SplashMVPPresenter
+import com.example.redoyahmed.hmsapp.util.AppConstants
 import javax.inject.Inject
 
 class SplashMVPActivity : BaseActivity(), SplashMVPView {
@@ -15,15 +17,13 @@ class SplashMVPActivity : BaseActivity(), SplashMVPView {
     @Inject
     lateinit var presenter: SplashMVPPresenter<SplashMVPView, SplashMVPInteractor>
 
-    private val SPLASH_TIME_OUT = 3000
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
         Handler().postDelayed({
             presenter.onAttach(this)
-        }, SPLASH_TIME_OUT.toLong())
+        }, AppConstants.SPLASH_SCREEN_TIME_OUT.toLong())
     }
 
     override fun onDestroy() {
@@ -44,19 +44,9 @@ class SplashMVPActivity : BaseActivity(), SplashMVPView {
     }
 
     override fun openMainActivity() {
-
-        /*var CurrentUserFirstName = appPreferenceHelper.getCurrentUserFirstName()
-
-        if (appPreferenceHelper.getCurrentUserFirstName().isNullOrEmpty() || appPreferenceHelper.getCurrentLastName().isNullOrEmpty() || appPreferenceHelper.getCurrentUserMobileNumber().isNullOrEmpty()) {
-            val intent = Intent(this, CreateProfileActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-            finish()
-        } else {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }*/
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     override fun openSignInActivity() {

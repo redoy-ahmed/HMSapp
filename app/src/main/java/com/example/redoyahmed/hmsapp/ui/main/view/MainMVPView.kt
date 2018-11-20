@@ -6,6 +6,7 @@ interface MainMVPView : MVPView {
 
     fun inflateUserDetails(userDetails: Pair<String?, String?>)
     fun openLoginActivity()
+    fun openHomeFragment()
     fun openAboutFragment()
     fun openRateUsDialog(): Unit?
     fun lockDrawer(): Unit?

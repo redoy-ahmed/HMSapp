@@ -11,6 +11,7 @@ import android.view.MenuItem
 import com.example.redoyahmed.hmsapp.R
 import com.example.redoyahmed.hmsapp.ui.about.view.AboutFragment
 import com.example.redoyahmed.hmsapp.ui.base.view.BaseActivity
+import com.example.redoyahmed.hmsapp.ui.home.view.HomeFragment
 import com.example.redoyahmed.hmsapp.ui.main.ineractor.MainMVPInteractor
 import com.example.redoyahmed.hmsapp.ui.main.presenter.MainMVPPresenter
 import com.example.redoyahmed.hmsapp.ui.rate.view.RateUsDialog
@@ -64,6 +65,9 @@ class MainActivity : BaseActivity(), MainMVPView, NavigationView.OnNavigationIte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.navItemHome -> {
+                presenter.onDrawerOptionAboutClick()
+            }
             R.id.navItemAbout -> {
                 presenter.onDrawerOptionAboutClick()
             }
@@ -93,6 +97,11 @@ class MainActivity : BaseActivity(), MainMVPView, NavigationView.OnNavigationIte
         finish()
     }
 
+    override fun openHomeFragment() {
+        lockDrawer()
+        supportFragmentManager.addFragment(R.id.cl_root_view, HomeFragment.newInstance(), HomeFragment.TAG)
+    }
+
     override fun openAboutFragment() {
         lockDrawer()
         supportFragmentManager.addFragment(R.id.cl_root_view, AboutFragment.newInstance(), AboutFragment.TAG)
@@ -110,6 +119,7 @@ class MainActivity : BaseActivity(), MainMVPView, NavigationView.OnNavigationIte
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         navView.setCheckedItem(0)
+        navView.menu.getItem(0).isChecked = true
         navView.setNavigationItemSelectedListener(this)
     }
 

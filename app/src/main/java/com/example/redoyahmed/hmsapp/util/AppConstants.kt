@@ -1,10 +1,9 @@
 package com.example.redoyahmed.hmsapp.util
 
 
-/**
- * Created by jyotidubey on 05/01/18.
- */
 object AppConstants {
+
+    internal val SPLASH_SCREEN_TIME_OUT = 3000
 
     internal val APP_DB_NAME = "mindorks_mvp.db"
     internal val PREF_NAME = "mindorks_pref"

@@ -9,6 +9,8 @@ import javax.inject.Inject
 
 class MainPresenter<V : MainMVPView, I : MainMVPInteractor> @Inject internal constructor(interactor: I, schedulerProvider: SchedulerProvider, disposable: CompositeDisposable) : BasePresenter<V, I>(interactor = interactor, schedulerProvider = schedulerProvider, compositeDisposable = disposable), MainMVPPresenter<V, I> {
 
+    override fun onDrawerOptionHomeClick() = getView()?.openHomeFragment()
+
     override fun onDrawerOptionRateUsClick() = getView()?.openRateUsDialog()
 
     override fun onDrawerOptionAboutClick() = getView()?.openAboutFragment()
