@@ -10,14 +10,12 @@ interface ApiHelper {
 
     //Start Area Authentication
     fun performServerLogin(request: SignInRequest.ServerLoginRequest): Observable<SignInResponse>
-
     fun performServerSignUp(request: SignUpRequest.ServerSignUpRequest): Observable<SignUpResponse>
     fun performChangePasswordApiCall(request: ChangePasswordRequest.PasswordChangeRequest): Observable<ChangePasswordResponse>
-
-    ///End Area Authentication
-
-
     fun performLogoutApiCall(): Observable<LogoutResponse>
+
+    //Start Area Authentication
+    fun getHomeInfoApiCall(): Observable<HomeInfoResponse>
 
     //Start Task Area
     fun getMyTaskDetailsApiCall(request: TaskRequest.ServerTaskRequest): Observable<TaskResponse>

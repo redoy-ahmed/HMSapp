@@ -4,9 +4,6 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import java.util.*
 
-/**
- * Created by jyotidubey on 17/01/18.
- */
 data class Notification(
 
 

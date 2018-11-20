@@ -10,16 +10,15 @@ import javax.inject.Inject
 
 class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHelper {
 
-    override fun setAccessToken(token: String) {
-        ApiHeader.PrivateApiHeader(cookieKey = token)
-        this.apiHeader.privateApiHeader = ApiHeader.PrivateApiHeader(cookieKey = token)
+    override fun setAccessToken(accessToken: String) {
+        ApiHeader.PrivateApiHeader(accessToken = accessToken)
+        this.apiHeader.privateApiHeader = ApiHeader.PrivateApiHeader(accessToken = accessToken)
     }
 
     //Start Area Authentication
 
     override fun performServerLogin(request: SignInRequest.ServerLoginRequest): Observable<SignInResponse> =
-            Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_LOGIN)
-                    //.addHeaders(apiHeader.publicApiHeader)
+            Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_HMS_LOGIN)
                     .addBodyParameter(request)
                     .build()
                     .getObjectObservable(SignInResponse::class.java)
@@ -30,22 +29,26 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
                     .build()
                     .getObjectObservable(LogoutResponse::class.java)
 
-
     override fun performServerSignUp(request: SignUpRequest.ServerSignUpRequest): Observable<SignUpResponse> {
 
         return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_SIGN_UP)
-                .addHeaders(apiHeader.publicApiHeader)
+                .addHeaders(apiHeader.privateApiHeader)
                 .addBodyParameter(request)
                 .build()
                 .getObjectObservable(SignUpResponse::class.java)
     }
 
-    ///End Area Authentication
+    override fun getHomeInfoApiCall(): Observable<HomeInfoResponse> {
+        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_HMS_HOME)
+            .addHeaders(apiHeader.privateApiHeader)
+            .build()
+            .getObjectObservable(HomeInfoResponse::class.java)
+    }
 
     //Start Task Area
     override fun getMyTaskDetailsApiCall(request: TaskRequest.ServerTaskRequest): Observable<TaskResponse> =
             Rx2AndroidNetworking.get(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_MYTASKLIST)
-                    .addHeaders(apiHeader.publicApiHeader)
+                    .addHeaders(apiHeader.privateApiHeader)
                     .addQueryParameter(request)
                     .build()
                     .getObjectObservable(TaskResponse::class.java)
@@ -53,7 +56,7 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
 
     override fun getBrowseTaskListApiCall(request: TaskRequest.ServerTaskRequest): Observable<TaskResponse> =
             Rx2AndroidNetworking.get(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_MYTASKLIST)
-                    .addHeaders(apiHeader.publicApiHeader)
+                    .addHeaders(apiHeader.privateApiHeader)
                     .addQueryParameter(request)
                     .build()
                     .getObjectObservable(TaskResponse::class.java)
@@ -77,7 +80,7 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
     override fun performPostTaskResponseTesting(request: TaskRequest.ServerTaskPostRequest, okHttpResponseListener: OkHttpResponseListener) {
 
         Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_MOBILELOGINREGISTRATION)
-                .addHeaders(apiHeader.publicApiHeader)
+                .addHeaders(apiHeader.privateApiHeader)
                 .addBodyParameter(request)
                 .build()
                 .getAsOkHttpResponse(okHttpResponseListener)
@@ -109,7 +112,7 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
 
     override fun getTaskPictures(taskId: Long): Observable<MediaResponse> =
             Rx2AndroidNetworking.get(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_TASK_IMAGE_GET + "/" + taskId)
-                    .addHeaders(apiHeader.publicApiHeader)
+                    .addHeaders(apiHeader.privateApiHeader)
                     .build()
                     .getObjectObservable(MediaResponse::class.java)
 
@@ -653,7 +656,7 @@ class AppApiHelper @Inject constructor(private var apiHeader: ApiHeader) : ApiHe
 
     override fun performForgotPasswordApiCall(request: ForgotPasswordRequest.ServerForgotPasswordRequest): Observable<ForgotPasswordResponse> =
             Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_SHOHOKARI_FORGOT_PASSWORD_POST)
-                    .addHeaders(apiHeader.publicApiHeader)
+                    .addHeaders(apiHeader.privateApiHeader)
                     .addBodyParameter(request)
                     .build()
                     .getObjectObservable(ForgotPasswordResponse::class.java)

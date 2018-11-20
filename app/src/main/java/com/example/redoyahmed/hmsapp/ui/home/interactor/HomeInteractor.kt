@@ -7,5 +7,5 @@ import javax.inject.Inject
 
 class HomeInteractor @Inject internal constructor(preferenceHelper: PreferenceHelper, apiHelper: ApiHelper) : BaseInteractor(preferenceHelper, apiHelper), HomeMVPInteractor {
 
-
+    override fun getHomeInfoApiCall() = apiHelper.getHomeInfoApiCall()
 }

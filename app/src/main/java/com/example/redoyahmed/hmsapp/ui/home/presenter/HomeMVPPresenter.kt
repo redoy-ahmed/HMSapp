@@ -6,4 +6,5 @@ import com.example.redoyahmed.hmsapp.ui.home.view.HomeMVPView
 
 interface HomeMVPPresenter<V : HomeMVPView, I : HomeMVPInteractor> : MVPPresenter<V, I> {
 
+    fun getHomeInfo()
 }

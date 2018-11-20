@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.redoyahmed.hmsapp.R
+import com.example.redoyahmed.hmsapp.data.network.Home
 import com.example.redoyahmed.hmsapp.data.preferences.AppPreferenceHelper
 import com.example.redoyahmed.hmsapp.ui.base.view.BaseFragment
 import com.example.redoyahmed.hmsapp.ui.home.interactor.HomeMVPInteractor
@@ -52,7 +53,7 @@ class HomeFragment : BaseFragment(), HomeMVPView {
 
     }
 
-    override fun loadGeneralInfo(category: String) {
+    override fun loadGeneralInfo(home: Home) {
 
     }
 }
