@@ -120,6 +120,7 @@ class MainActivity : BaseActivity(), MainMVPView, NavigationView.OnNavigationIte
         toggle.syncState()
         navView.setCheckedItem(0)
         navView.menu.getItem(0).isChecked = true
+        onNavigationItemSelected(navView.menu.findItem(R.id.navItemHome))
         navView.setNavigationItemSelectedListener(this)
     }
 
